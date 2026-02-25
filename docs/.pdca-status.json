@@ -1,0 +1,139 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-02-25T13:43:46.281Z",
+  "activeFeatures": [
+    "수요예측 시스템",
+    "day2",
+    "day3"
+  ],
+  "primaryFeature": "day3",
+  "features": {
+    "수요예측 시스템": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-25T10:55:17.330Z",
+        "lastUpdated": "2026-02-25T13:43:46.281Z"
+      },
+      "lastFile": "E:\\프로젝트\\부족한 프로젝트 시작\\수요예측 시스템\\src\\models\\sarima_model.py"
+    },
+    "day2": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [
+        "STL Decomposition (Top 5 상품군)",
+        "정상성 검정 (ADF, KPSS)",
+        "evaluation.py 구현",
+        "베이스라인 모델 (Naive, MA)",
+        "feature_engineering.py 구현"
+      ],
+      "documents": {
+        "plan": "docs/01-plan/features/day2.plan.md"
+      },
+      "timestamps": {
+        "started": "2026-02-25T12:00:00.000Z",
+        "lastUpdated": "2026-02-25T12:00:00.000Z"
+      },
+      "lastFile": "docs/01-plan/features/day2.plan.md"
+    },
+    "day3": {
+      "phase": "check",
+      "phaseNumber": 4,
+      "matchRate": 97,
+      "iterationCount": 0,
+      "requirements": [
+        "ACF/PACF 분석 + AIC 기준 차수 결정",
+        "SARIMA vs SARIMAX 비교",
+        "잔차 분석 (Ljung-Box, Q-Q plot)",
+        "Validation 예측 + 신뢰구간",
+        "sarima_model.py 모듈 구현"
+      ],
+      "documents": {
+        "plan": "docs/01-plan/features/day3.plan.md"
+      },
+      "timestamps": {
+        "started": "2026-02-25T13:00:00.000Z",
+        "lastUpdated": "2026-02-25T13:48:00.000Z"
+      },
+      "lastFile": "notebooks/03_sarima.ipynb"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-02-25T10:50:23.924Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-02-25T13:43:46.281Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-02-25T10:55:17.330Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T10:59:32.027Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T11:12:56.970Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T11:13:45.440Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T11:14:29.483Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T11:14:49.494Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T11:15:45.969Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T12:09:12.096Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T12:09:26.786Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-25T13:43:46.281Z",
+      "feature": "수요예측 시스템",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
+}

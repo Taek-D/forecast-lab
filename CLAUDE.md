@@ -117,12 +117,12 @@ forecast-lab/
   - 베이스라인 MAPE 기록
 
 ### Day 3: SARIMA 모델
-- [ ] 03_sarima.ipynb
+- [x] 03_sarima.ipynb
   - ACF/PACF 분석 → p, d, q, P, D, Q, m 결정
   - SARIMAX (외생변수 포함/미포함 비교)
-  - Grid Search 또는 auto_arima
+  - AIC 기준 후보 차수 비교
   - 잔차 분석 (Ljung-Box, 정규성, 시각화)
-  - 예측 + 80%/95% 신뢰구간
+  - 예측 + 95% 신뢰구간
   - Validation MAPE 기록
 
 ### Day 4: Prophet 모델
