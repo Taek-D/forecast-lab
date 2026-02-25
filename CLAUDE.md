@@ -126,7 +126,7 @@ forecast-lab/
   - Validation MAPE 기록
 
 ### Day 4: Prophet 모델
-- [ ] 04_prophet.ipynb
+- [x] 04_prophet.ipynb
   - 기본 피팅 + 체인지포인트 시각화
   - 공휴일/프로모션/유가 regressor 추가
   - changepoint_prior_scale / seasonality_prior_scale 튜닝
