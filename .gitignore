@@ -1,8 +1,11 @@
 # Data
 data/raw/
 data/processed/
-*.csv
 *.parquet
+
+# CSV (데이터 파일은 제외, 결과 파일은 허용)
+*.csv
+!outputs/results/*.csv
 
 # Models
 models/sarima/

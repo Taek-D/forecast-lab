@@ -106,12 +106,12 @@ forecast-lab/
 - [x] 전처리 데이터 저장 (data/processed/) — full_data, train, val, test, top_families
 
 ### Day 2: 시계열 분해 + 베이스라인
-- [ ] 02_decomposition.ipynb
+- [x] 02_decomposition.ipynb
   - STL Decomposition (Trend / Seasonal / Residual)
   - 계절성 주기 확인 (7일, 30일, 365일)
   - ADF Test + KPSS Test → 정상성 검정
   - 차분 필요 여부 결정
-- [ ] 베이스라인 모델
+- [x] 베이스라인 모델
   - Naive (전주 동일 요일 값)
   - Moving Average (7일, 30일)
   - 베이스라인 MAPE 기록
