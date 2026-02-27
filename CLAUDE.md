@@ -134,12 +134,12 @@ forecast-lab/
   - Validation MAPE 기록
 
 ### Day 5: XGBoost + 모델 비교
-- [ ] 05_xgboost.ipynb
+- [x] 05_xgboost.ipynb
   - Feature Engineering: lag(7,14,28,365), rolling(7일,30일), 날짜, 외생변수
   - TimeSeriesSplit 교차검증
   - Optuna 하이퍼파라미터 튜닝
   - SHAP Feature Importance
-- [ ] 06_model_comparison.ipynb
+- [x] 06_model_comparison.ipynb
   - 3모델 비교표 (MAPE, RMSE, MAE, 학습시간)
   - 상품군별 최적 모델 분석
   - 앙상블 시도 (가중 평균)
