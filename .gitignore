@@ -1,11 +1,11 @@
 # Data
 data/raw/
-data/processed/
 *.parquet
 
-# CSV (데이터 파일은 제외, 결과 파일은 허용)
+# CSV (데이터 파일은 제외, 결과/앱용 파일은 허용)
 *.csv
 !outputs/results/*.csv
+!data/processed/*.csv
 
 # Models
 models/sarima/
@@ -32,3 +32,8 @@ Thumbs.db
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Tool artifacts
+.bkit/
+.claude/
+.playwright-mcp/
