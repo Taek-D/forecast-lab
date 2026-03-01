@@ -2,6 +2,7 @@
 ForecastLab 프로젝트 초기 세팅 스크립트
 실행: python setup.py
 """
+
 import os
 import subprocess
 import sys
@@ -57,26 +58,31 @@ headless = true
 # 2. Kaggle 데이터 다운로드
 print("\n📦 Kaggle 데이터 다운로드 중...")
 print("  ⚠️  kaggle API 토큰이 필요합니다 (~/.kaggle/kaggle.json)")
-print("  ⚠️  없으면 수동 다운로드: https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data\n")
+print(
+    "  ⚠️  없으면 수동 다운로드: https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data\n"
+)
 
 data_dir = os.path.join(PROJECT_ROOT, "data/raw")
 try:
     subprocess.run(
-        [
-            sys.executable, "-m", "pip", "install", "kaggle", "-q"
-        ],
+        [sys.executable, "-m", "pip", "install", "kaggle", "-q"],
         check=True,
     )
     subprocess.run(
         [
-            "kaggle", "competitions", "download",
-            "-c", "store-sales-time-series-forecasting",
-            "-p", data_dir,
+            "kaggle",
+            "competitions",
+            "download",
+            "-c",
+            "store-sales-time-series-forecasting",
+            "-p",
+            data_dir,
         ],
         check=True,
     )
     # zip 해제
     import zipfile
+
     zip_path = os.path.join(data_dir, "store-sales-time-series-forecasting.zip")
     if os.path.exists(zip_path):
         with zipfile.ZipFile(zip_path, "r") as z:
@@ -89,7 +95,7 @@ except Exception as e:
 
 # 3. 가상환경 안내
 print("\n🐍 가상환경 생성 (권장):")
-print(f"  cd \"{PROJECT_ROOT}\"")
+print(f'  cd "{PROJECT_ROOT}"')
 print("  python -m venv .venv")
 print("  .venv\\Scripts\\activate    # Windows")
 print("  pip install -r requirements.txt")

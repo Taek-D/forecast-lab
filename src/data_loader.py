@@ -7,7 +7,6 @@ Top 5 상품군 x 전체 매장 합산 시계열로 변환하는 파이프라인
 from __future__ import annotations
 
 import pandas as pd
-import numpy as np
 from pathlib import Path
 from typing import Tuple, List
 
@@ -63,9 +62,7 @@ def get_top_families(train: pd.DataFrame, n: int = 5) -> List[str]:
     return family_sales.head(n).index.tolist()
 
 
-def aggregate_by_family(
-    train: pd.DataFrame, families: List[str]
-) -> pd.DataFrame:
+def aggregate_by_family(train: pd.DataFrame, families: List[str]) -> pd.DataFrame:
     """선정된 상품군에 대해 전체 매장 합산 일별 매출을 계산한다.
 
     Args:
@@ -108,9 +105,7 @@ def prepare_oil_data(
     else:
         oil = oil.sort_values("date").reset_index(drop=True)
 
-    oil["oil_price"] = (
-        oil["oil_price"].interpolate(method="linear").ffill().bfill()
-    )
+    oil["oil_price"] = oil["oil_price"].interpolate(method="linear").ffill().bfill()
     return oil
 
 
@@ -213,17 +208,15 @@ def merge_external_data(
     df = df.merge(
         holidays[["date", "is_holiday", "holiday_type"]], on="date", how="left"
     )
-    df = df.merge(
-        transactions[["date", "total_transactions"]], on="date", how="left"
-    )
+    df = df.merge(transactions[["date", "total_transactions"]], on="date", how="left")
 
     # 결측 채우기
     df["is_holiday"] = df["is_holiday"].fillna(0).astype(int)
     df["holiday_type"] = df["holiday_type"].fillna("None")
     df["oil_price"] = df["oil_price"].interpolate(method="linear").ffill().bfill()
-    df["total_transactions"] = df.groupby("family")[
-        "total_transactions"
-    ].transform(lambda x: x.interpolate(method="linear").ffill().bfill())
+    df["total_transactions"] = df.groupby("family")["total_transactions"].transform(
+        lambda x: x.interpolate(method="linear").ffill().bfill()
+    )
 
     return df
 

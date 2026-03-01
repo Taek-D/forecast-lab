@@ -8,7 +8,6 @@ from __future__ import annotations
 import time
 from typing import List, Tuple
 
-import numpy as np
 import pandas as pd
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 

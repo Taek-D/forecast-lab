@@ -7,7 +7,6 @@
 from __future__ import annotations
 
 import pandas as pd
-import numpy as np
 from typing import List
 
 
@@ -63,13 +62,13 @@ def create_rolling_features(
         # shift(1) 후 rolling: 현재 시점 미포함 (미래 유출 방지)
         shifted = df.groupby("family")[target].shift(1)
 
-        df[f"rolling_mean_{window}"] = shifted.groupby(
-            df["family"]
-        ).transform(lambda x: x.rolling(window=window, min_periods=window).mean())
+        df[f"rolling_mean_{window}"] = shifted.groupby(df["family"]).transform(
+            lambda x: x.rolling(window=window, min_periods=window).mean()
+        )
 
-        df[f"rolling_std_{window}"] = shifted.groupby(
-            df["family"]
-        ).transform(lambda x: x.rolling(window=window, min_periods=window).std())
+        df[f"rolling_std_{window}"] = shifted.groupby(df["family"]).transform(
+            lambda x: x.rolling(window=window, min_periods=window).std()
+        )
 
     return df
 

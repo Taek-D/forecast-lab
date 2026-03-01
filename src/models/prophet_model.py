@@ -8,7 +8,6 @@ from __future__ import annotations
 import time
 from typing import List, Tuple
 
-import numpy as np
 import pandas as pd
 from prophet import Prophet
 from prophet.diagnostics import cross_validation, performance_metrics
@@ -112,12 +111,14 @@ class ProphetModel:
         forecast = self.model_.predict(future)
         self.predict_time_ = time.perf_counter() - start
 
-        result_df = pd.DataFrame({
-            "date": forecast["ds"].values,
-            "forecast": forecast["yhat"].values,
-            "lower_ci": forecast["yhat_lower"].values,
-            "upper_ci": forecast["yhat_upper"].values,
-        })
+        result_df = pd.DataFrame(
+            {
+                "date": forecast["ds"].values,
+                "forecast": forecast["yhat"].values,
+                "lower_ci": forecast["yhat_lower"].values,
+                "upper_ci": forecast["yhat_upper"].values,
+            }
+        )
         return result_df
 
     def cross_validate(
