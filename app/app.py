@@ -108,6 +108,6 @@ timeline_data = {
         "XGBoost + 모델 비교",
         "Streamlit 대시보드",
     ],
-    "상태": ["✅", "✅", "✅", "✅", "✅", "🚀"],
+    "상태": ["✅", "✅", "✅", "✅", "✅", "✅"],
 }
 st.dataframe(pd.DataFrame(timeline_data), hide_index=True, use_container_width=True)
