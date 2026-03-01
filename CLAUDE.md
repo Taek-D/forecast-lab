@@ -146,22 +146,22 @@ forecast-lab/
   - Test set 최종 평가
 
 ### Day 6: Streamlit 앱
-- [ ] app/ 구현
+- [x] app/ 구현
   - 사이드바: 상품군 선택, 예측 기간, 모델 선택
   - Tab 1: EDA 대시보드
   - Tab 2: 모델 비교
   - Tab 3: 예측 결과 + 신뢰구간
   - Tab 4: Feature Importance (SHAP)
   - Tab 5: 재고 최적화 시뮬레이션
-- [ ] Streamlit Cloud 배포
+- [x] Streamlit Cloud 배포
 
 ### Day 7: GitHub + Notion 정리
-- [ ] README.md 완성
-- [ ] 핵심 시각화 스크린샷 3~4장
-- [ ] Notion 포트폴리오 업로드
+- [x] README.md 완성
+- [x] 핵심 시각화 스크린샷 3~4장
+- [x] Notion 포트폴리오 업로드
   - Problem: "수동 발주로 인한 재고 과잉/부족 → 기회비용 발생"
   - Solution: "Prophet/SARIMA/XGBoost 3모델 비교 기반 수요 예측 시스템"
-  - Impact: "MAPE 12% 이하 달성, 재고 최적화 시뮬레이션으로 과잉재고 -XX% 감소 추정"
+  - Impact: "MAPE 8.19% 달성 (목표 12% 대비 -3.81%p), 베이스라인 대비 75~95% 오차 감소"
   - Learning: "시계열 모델별 특성 이해, 외생변수 효과 검증, Cross-validation 설계"
 
 ## 개발 도구 워크플로우
